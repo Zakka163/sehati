@@ -58,7 +58,7 @@ const handleLogin = (e) => {
     const user = users.find(u => u.email === email.value && u.password === password.value)
 
     if (user) {
-        alert(`Selamat datang, ${user.name}!`)
+        // alert(`Selamat datang, ${user}!`)
         localStorage.setItem('loggedInUser', JSON.stringify(user))
 
         // ✅ Redirect ke dashboard
