@@ -2,13 +2,12 @@
   <div style="background-color: #eafaea; min-height: 100vh">
     <Navbar />
 
-    <div
-      class="content-container d-flex flex-wrap justify-content-center gap-4 p-4"
-    >
+    <div class="content-container d-flex flex-wrap justify-content-center gap-4 p-4">
       <!-- HealthCard di kiri -->
       <div class="left-box">
         <HealthCard :cards="healthData" />
       </div>
+
       <!-- Notifikasi di kanan -->
       <div class="right-box mt-1">
         <div class="mt-2">
@@ -16,11 +15,7 @@
             <h6 class="fw-bold">Notifikasi</h6>
             <ul class="list-unstyled mb-0">
               <!-- Menampilkan notifikasi berdasarkan data terakhir -->
-              <li
-                v-for="(notif, index) in notifications"
-                :key="index"
-                class="mb-3 d-flex align-items-start"
-              >
+              <li v-for="(notif, index) in notifications" :key="index" class="mb-3 d-flex align-items-start">
                 <span class="me-2">📅</span>
                 <div>
                   <div class="text-muted small">{{ notif.date }}</div>
@@ -33,16 +28,19 @@
           </div>
         </div>
       </div>
+      <!-- Judul Artikel -->
+      <div class="w-100 text-center mt-3 mb-2">
+        <h4 class="fw-bold text-success">Berita dan Edukasi Kesehatan</h4>
+      </div>
+
       <!-- VideoCard Section -->
       <div class="w-100 d-flex flex-wrap justify-content-center gap-4 mt-4">
-        <VideoCard
-          v-for="(video, index) in videoList"
-          :key="index"
-          :video="video"
-        />
+        <VideoCard v-for="(video, index) in videoList" :key="index" :video="video" />
       </div>
+
+
       <!-- ArtikelCard Section -->
-      <div class=" flex flex-wrap justify-center gap-4  mt-4">
+      <div class="flex flex-wrap justify-center gap-4 mt-3">
         <ArticleCard :articles="articleList" />
       </div>
     </div>
@@ -54,10 +52,10 @@ import Navbar from "@/components/Navbar.vue";
 import HealthCard from "@/components/HealthCard.vue";
 import VideoCard from "../components/VideoCard.vue";
 import ArticleCard from "../components/ArticleCard.vue";
-import artikel_1 from '@/assets/artikel_1.jpeg'; 
-import artikel_2 from '@/assets/artikel_2.jpeg'; 
-import artikel_3 from '@/assets/artikel_3.jpeg'; 
-import artikel_4 from '@/assets/artikel_4.jpeg'; 
+import artikel_1 from '@/assets/artikel_1.jpeg';
+import artikel_2 from '@/assets/artikel_2.jpeg';
+import artikel_3 from '@/assets/artikel_3.jpeg';
+import artikel_4 from '@/assets/artikel_4.jpeg';
 const router = useRouter(); // inisialisasi router
 onMounted(() => {
   const users = JSON.parse(localStorage.getItem("loggedInUser"));

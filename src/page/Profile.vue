@@ -67,7 +67,7 @@
                             Update
                         </button>
                         <button type="button" class="custom-button btn btn-primary px-4 py-2 ms-2" @click="toggleEdit">
-                            {{ edit ? 'Edit' : 'Cancel' }}
+                            {{ edit ? 'Cancel' : 'Edit' }}
                         </button>
 
                     </div>
