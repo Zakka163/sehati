@@ -1,48 +1,49 @@
 <template>
-  <div class="article-card bg-[#EAFAEA] rounded-lg shadow-sm p-1.5 w-[130px] items-center">
-    <img
-      :src="article.image"
-      alt="Article Image"
-      class="w-[100px] h-16 object-cover rounded-md mb-1 mx-auto"
-    />
-
-    <div class="text-muted text-[9px] mb-[1px] flex items-center gap-[2px]">
-      📅 {{ article.date }}
-    </div>
-
-    <h5 class="font-semibold text-success-emphasis mb-[1px] text-[10px] leading-tight text-center">
-      {{ article.title }}
-    </h5>
-
-    <p class="text-[9px] text-gray-700 mb-1 line-clamp-2 text-center">
-      {{ article.summary }}
-    </p>
-
-    <div class="flex justify-center mt-auto">
-      <a
-        :href="article.link"
-        target="_blank"
-        class="text-white bg-[#960A3C] px-1.5 py-[1px] rounded-full text-[8px] hover:bg-[#7b082f]"
-      >
-        Read
-      </a>
+  <div class="py-4 px-3" style="background-color: #EAFAEA;">
+    <div class="container">
+      <div class="row g-4">
+        <div
+          class="col-12 col-sm-6 col-lg-4"
+          v-for="(article, index) in articles"
+          :key="index"
+        >
+          <div class="card h-100 shadow-sm border-0">
+            <img
+              :src="article.image"
+              :alt="article.title"
+              class="card-img-top"
+              style="height: 200px; object-fit: cover;"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title text-success mb-2">
+                {{ article.title }}
+              </h5>
+              <p class="card-text text-muted small">
+                {{ article.summary }}
+              </p>
+              <p class="text-secondary small mt-auto">
+                <i class="bi bi-person-circle me-1"></i>{{ article.author }} • {{ article.date }}
+              </p>
+              <a
+                :href="article.link"
+                target="_blank"
+                class="btn btn-sm btn-outline-success mt-2 align-self-start"
+              >
+                Baca Selengkapnya →
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
 
 <script setup>
 defineProps({
-  article: {
-    type: Object,
+  articles: {
+    type: Array,
     required: true
   }
 });
 </script>
-
-<style scoped>
-.article-card {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-}
-</style>

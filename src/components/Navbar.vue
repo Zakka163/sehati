@@ -1,6 +1,6 @@
 <template>
-  <div class="d-flex justify-content-center">
-    <nav class="navbar-container d-flex align-items-center justify-content-between px-5 py-3 flex-wrap">
+  <div>
+    <nav class="navbar-container fixed-top d-flex align-items-center justify-content-between px-5 py-3 flex-wrap">
       <div class="d-flex align-items-center logo-container">
         <img src="@/assets/logo.png" alt="Logo" class="logo me-2" />
         <span class="brand-text fw-bold">SEHATI</span>
@@ -12,6 +12,8 @@
         <router-link to="/profile" class="nav-link" exact-active-class="active-link">Profile</router-link>
       </div>
     </nav>
+    <!-- Spacer biar konten ga ketimpa navbar -->
+    <div style="height: 90px;"></div>
   </div>
 </template>
 
@@ -139,4 +141,22 @@
     font-size: 1.2rem;
   }
 }
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+}
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%; /* Atur lebar navbar */
+  max-width: 1100px; /* Lebar maksimal navbar */
+  z-index: 1030;
+}
+
+
 </style>

@@ -42,12 +42,8 @@
         />
       </div>
       <!-- ArtikelCard Section -->
-      <div class="w-100 flex flex-wrap justify-center gap-4  mt-4">
-        <ArticleCard
-          v-for="(item, index) in articles"
-          :key="index"
-          :article="item"
-        />
+      <div class=" flex flex-wrap justify-center gap-4  mt-4">
+        <ArticleCard :articles="articleList" />
       </div>
     </div>
   </div>
@@ -170,48 +166,49 @@ if (lastData.status?.denyut === "Darurat") {
 // Data untuk VideoCard
 const videoList = [
   {
-    url: "https://www.youtube.com/embed/apur_xbMpEk",
-    date: "March 28, 2024",
-    title: "Memahami Kekerasan Verbal dan Psikologis",
+    url: "https://www.youtube.com/embed/MaQzaNoRJ7o",
+    date: "September 12, 2017",
+    title: "CARA PEMERIKSAAN TANDA-TANDA VITAL (TTV) LENGKAP | Video Edukasi",
+  },
+  {
+    url: "https://www.youtube.com/embed/mIrFqOrQ1TQ",
+    date: "October 15, 2019",
+    title: "Video Tutorial Pemeriksaan Tanda-Tanda Vital (TTV)",
   },
   {
     url: "https://www.youtube.com/embed/apur_xbMpEk",
-    date: "March 28, 2024",
-    title: "Memahami Kekerasan Verbal dan Psikologis",
+    date: "August 20, 2020",
+    title: "VIDEO PRAKTEK KEPERAWATAN (EPISODE 26) | PEMERIKSAAN TANDA VITAL",
   },
   {
-    url: "https://www.youtube.com/embed/apur_xbMpEk",
-    date: "March 28, 2024",
-    title: "Memahami Kekerasan Verbal dan Psikologis",
+    url: "https://www.youtube.com/embed/82PuONLFDo8",
+    date: "October 5, 2021",
+    title: "Pemeriksaan Tanda - Tanda Vital (Vital Sign) Neonatus",
   },
   {
-    url: "https://www.youtube.com/embed/apur_xbMpEk",
-    date: "March 28, 2024",
-    title: "Memahami Kekerasan Verbal dan Psikologis",
+    url: "https://www.youtube.com/embed/bNbsN3yNdNg",
+    date: "November 10, 2024",
+    title: "PENGUKURAN TANDA-TANDA VITAL (TTV)",
   },
   {
-    url: "https://www.youtube.com/embed/apur_xbMpEk",
-    date: "March 28, 2024",
-    title: "Memahami Kekerasan Verbal dan Psikologis",
+    url: "https://www.youtube.com/embed/qKvZaaY3fPs",
+    date: "March 25, 2025",
+    title: "Pemeriksaan Tanda-Tanda Vital TTV",
   },
   {
-    url: "https://www.youtube.com/embed/apur_xbMpEk",
-    date: "March 28, 2024",
-    title: "Memahami Kekerasan Verbal dan Psikologis",
+    url: "https://www.youtube.com/embed/TERgm7TDtqg",
+    date: "December 1, 2024",
+    title: "Video Pembelajaran Pemeriksaan Tanda-tanda Vital Fakultas Kedokteran",
   },
   {
-    url: "https://www.youtube.com/embed/apur_xbMpEk",
-    date: "March 28, 2024",
-    title: "Memahami Kekerasan Verbal dan Psikologis",
-  },
-  {
-    url: "https://www.youtube.com/embed/apur_xbMpEk",
-    date: "March 28, 2024",
-    title: "Memahami Kekerasan Verbal dan Psikologis",
+    url: "https://www.youtube.com/embed/EDtXMtqbPl8",
+    date: "July 18, 2023",
+    title: "Prosedur Pemeriksaan Tanda tanda Vital - Vital Sign dengan Benar",
   },
 ];
+
 // Data untuk ArticleCard
-const articles = [
+const articleList = [
   {
     title: 'Tujuan Pemeriksaan TTV',
     summary: 'Panduan lengkap untuk memahami pentingnya pemeriksaan Tanda-Tanda Vital (TTV) demi kesehatan optimal.',
@@ -221,32 +218,31 @@ const articles = [
     link: 'https://www.liputan6.com/feeds/read/5904194/tujuan-pemeriksaan-ttv-panduan-lengkap-untuk-kesehatan-optimal'
   },
   {
-    title: 'Tujuan Pemeriksaan TTV',
-    summary: 'Panduan lengkap untuk memahami pentingnya pemeriksaan Tanda-Tanda Vital (TTV) demi kesehatan optimal.',
-    date: '13 Apr, 2025',
+    title: 'Mengapa TTV Penting Dipantau?',
+    summary: 'TTV dapat memberikan petunjuk awal adanya masalah kesehatan. Ketahui manfaat pemantauan rutin.',
+    date: '14 Apr, 2025',
     author: 'Liputan6',
-    image: 'https://cdn1-production-images-kly.akamaized.net/jNw-E8q2i6EQPqtt-Tnlep27smY=/1280x720/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5116881/original/086551600_1738379794-1738376135787_tujuan-pemeriksaan-ttv.jpg',
-    link: 'https://www.liputan6.com/feeds/read/5904194/tujuan-pemeriksaan-ttv-panduan-lengkap-untuk-kesehatan-optimal'
+    image: 'https://cdn1-production-images-kly.akamaized.net/yUnu6mFeHXYVDQLv91LPn1k2lfc=/1280x720/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5116882/original/0000000000-ttv-check.jpg',
+    link: 'https://www.liputan6.com/health/read/5904195/mengapa-ttv-penting-dipantau'
   },
   {
-    title: 'Tujuan Pemeriksaan TTV',
-    summary: 'Panduan lengkap untuk memahami pentingnya pemeriksaan Tanda-Tanda Vital (TTV) demi kesehatan optimal.',
-    date: '13 Apr, 2025',
+    title: 'Cara Membaca Hasil TTV dengan Benar',
+    summary: 'Penjelasan mudah mengenai cara membaca suhu tubuh, nadi, respirasi, dan tekanan darah.',
+    date: '15 Apr, 2025',
     author: 'Liputan6',
-    image: 'https://cdn1-production-images-kly.akamaized.net/jNw-E8q2i6EQPqtt-Tnlep27smY=/1280x720/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5116881/original/086551600_1738379794-1738376135787_tujuan-pemeriksaan-ttv.jpg',
-    link: 'https://www.liputan6.com/feeds/read/5904194/tujuan-pemeriksaan-ttv-panduan-lengkap-untuk-kesehatan-optimal'
+    image: 'https://cdn1-production-images-kly.akamaized.net/XH3W9EhYZ1eBlBzDgsK-pU0KQTA=/1280x720/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5116883/original/ttv-ilustrasi-checkup.jpg',
+    link: 'https://www.liputan6.com/health/read/5904196/cara-membaca-hasil-ttv-dengan-benar'
   },
   {
-    title: 'Tujuan Pemeriksaan TTV',
-    summary: 'Panduan lengkap untuk memahami pentingnya pemeriksaan Tanda-Tanda Vital (TTV) demi kesehatan optimal.',
-    date: '13 Apr, 2025',
+    title: 'Peran TTV dalam Dunia Medis',
+    summary: 'TTV menjadi indikator penting dalam diagnosa awal. Pelajari bagaimana tenaga medis menggunakannya.',
+    date: '16 Apr, 2025',
     author: 'Liputan6',
-    image: 'https://cdn1-production-images-kly.akamaized.net/jNw-E8q2i6EQPqtt-Tnlep27smY=/1280x720/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5116881/original/086551600_1738379794-1738376135787_tujuan-pemeriksaan-ttv.jpg',
-    link: 'https://www.liputan6.com/feeds/read/5904194/tujuan-pemeriksaan-ttv-panduan-lengkap-untuk-kesehatan-optimal'
-  },
-  
-  
-]
+    image: 'https://cdn1-production-images-kly.akamaized.net/tnvXx9lKmHJCG_c5PzdyU_0vU98=/1280x720/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5116884/original/medis-ttv-alat.jpg',
+    link: 'https://www.liputan6.com/health/read/5904197/peran-ttv-dalam-dunia-medis'
+  }
+];
+
 </script>
 
 <style scoped>
