@@ -54,6 +54,10 @@ import Navbar from "@/components/Navbar.vue";
 import HealthCard from "@/components/HealthCard.vue";
 import VideoCard from "../components/VideoCard.vue";
 import ArticleCard from "../components/ArticleCard.vue";
+import artikel_1 from '@/assets/artikel_1.jpeg'; 
+import artikel_2 from '@/assets/artikel_2.jpeg'; 
+import artikel_3 from '@/assets/artikel_3.jpeg'; 
+import artikel_4 from '@/assets/artikel_4.jpeg'; 
 const router = useRouter(); // inisialisasi router
 onMounted(() => {
   const users = JSON.parse(localStorage.getItem("loggedInUser"));
@@ -214,7 +218,7 @@ const articleList = [
     summary: 'Panduan lengkap untuk memahami pentingnya pemeriksaan Tanda-Tanda Vital (TTV) demi kesehatan optimal.',
     date: '13 Apr, 2025',
     author: 'Liputan6',
-    image: 'https://cdn1-production-images-kly.akamaized.net/jNw-E8q2i6EQPqtt-Tnlep27smY=/1280x720/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5116881/original/086551600_1738379794-1738376135787_tujuan-pemeriksaan-ttv.jpg',
+    image: artikel_1,
     link: 'https://www.liputan6.com/feeds/read/5904194/tujuan-pemeriksaan-ttv-panduan-lengkap-untuk-kesehatan-optimal'
   },
   {
@@ -222,7 +226,7 @@ const articleList = [
     summary: 'TTV dapat memberikan petunjuk awal adanya masalah kesehatan. Ketahui manfaat pemantauan rutin.',
     date: '14 Apr, 2025',
     author: 'Liputan6',
-    image: 'https://cdn1-production-images-kly.akamaized.net/yUnu6mFeHXYVDQLv91LPn1k2lfc=/1280x720/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5116882/original/0000000000-ttv-check.jpg',
+    image: artikel_2,
     link: 'https://www.liputan6.com/health/read/5904195/mengapa-ttv-penting-dipantau'
   },
   {
@@ -230,7 +234,7 @@ const articleList = [
     summary: 'Penjelasan mudah mengenai cara membaca suhu tubuh, nadi, respirasi, dan tekanan darah.',
     date: '15 Apr, 2025',
     author: 'Liputan6',
-    image: 'https://cdn1-production-images-kly.akamaized.net/XH3W9EhYZ1eBlBzDgsK-pU0KQTA=/1280x720/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5116883/original/ttv-ilustrasi-checkup.jpg',
+    image: artikel_3,
     link: 'https://www.liputan6.com/health/read/5904196/cara-membaca-hasil-ttv-dengan-benar'
   },
   {
@@ -238,7 +242,7 @@ const articleList = [
     summary: 'TTV menjadi indikator penting dalam diagnosa awal. Pelajari bagaimana tenaga medis menggunakannya.',
     date: '16 Apr, 2025',
     author: 'Liputan6',
-    image: 'https://cdn1-production-images-kly.akamaized.net/tnvXx9lKmHJCG_c5PzdyU_0vU98=/1280x720/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/5116884/original/medis-ttv-alat.jpg',
+    image: artikel_4,
     link: 'https://www.liputan6.com/health/read/5904197/peran-ttv-dalam-dunia-medis'
   }
 ];
