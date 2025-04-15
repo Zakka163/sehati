@@ -51,13 +51,14 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
 
 // State input
 const name = ref('')
 const email = ref('')
 const password = ref('')
 const confirmPassword = ref('')
-
+const router = useRouter();
 // Simpan data ke localStorage saat submit
 const handleRegister = (e) => {
     e.preventDefault()
@@ -87,7 +88,7 @@ const handleRegister = (e) => {
 
     // Simpan kembali ke localStorage
     localStorage.setItem('registeredUsers', JSON.stringify(users))
-
+    return router.push("/login");
     alert('Pendaftaran berhasil!')
 
     // Reset form
